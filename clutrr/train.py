@@ -63,10 +63,11 @@ def train():
 	
 
 	trainer = pl.Trainer(
-			gpus=1,
+			#gpus=1,
+			accelerator="auto",
 			max_epochs=cl_args.epochs,
 			gradient_clip_val=cl_args.max_grad_norm,
-			progress_bar_refresh_rate=1,
+			#progress_bar_refresh_rate=1,
 			precision=cl_args.precision
 		)
 
